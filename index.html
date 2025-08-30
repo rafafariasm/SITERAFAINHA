@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafa Farias - COMA [EP]</title>
+    <meta name="description" content="COMA - EP musical de Rafa Farias">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-small">
+            <img src="IMG-ARTS/1-LOGO-RAFA-FARIAS-SEÇÃO-1.png" alt="Logo Rafa Farias">
+        </div>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="#p1" class="nav-link active" aria-label="Seção 1: Bem-vindo">1</a></li>
+                <li><a href="#p2" class="nav-link" aria-label="Seção 2: COMA">2</a></li>
+                <li><a href="#p3" class="nav-link" aria-label="Seção 3: Born Again">3</a></li>
+                <li><a href="#p4" class="nav-link" aria-label="Seção 4: The Voice That Betrays">4</a></li>
+                <li><a href="#p5" class="nav-link" aria-label="Seção 5: No More Chains">5</a></li>
+                <li><a href="#p6" class="nav-link" aria-label="Seção 6: Silence">6</a></li>
+                <li><a href="#p7" class="nav-link" aria-label="Seção 7: Release">7</a></li>
+                <li><a href="#p8" class="nav-link" aria-label="Seção 8: Galeria">8</a></li>
+                <li><a href="#p9" class="nav-link" aria-label="Seção 9: Vídeo">9</a></li>
+            </ul>
+        </nav>
+        <button class="menu-fab" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="#p1" class="nav-link" aria-label="Seção 1: Bem-vindo">1</a></li>
+                <li><a href="#p2" class="nav-link" aria-label="Seção 2: COMA">2</a></li>
+                <li><a href="#p3" class="nav-link" aria-label="Seção 3: Born Again">3</a></li>
+                <li><a href="#p4" class="nav-link" aria-label="Seção 4: The Voice That Betrays">4</a></li>
+                <li><a href="#p5" class="nav-link" aria-label="Seção 5: No More Chains">5</a></li>
+                <li><a href="#p6" class="nav-link" aria-label="Seção 6: Silence">6</a></li>
+                <li><a href="#p7" class="nav-link" aria-label="Seção 7: Release">7</a></li>
+                <li><a href="#p8" class="nav-link" aria-label="Seção 8: Galeria">8</a></li>
+                <li><a href="#p9" class="nav-link" aria-label="Seção 9: Vídeo">9</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="section-controls">
+        <button class="prev-section" aria-label="Seção anterior">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <button class="next-section" aria-label="Próxima seção">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
+    </div>
+
+    <main>
+        <!-- Seção 1: Bem-vindo -->
+        <section id="p1" class="section">
+            <div class="section-inner">
+                <div class="logo-container reveal">
+                    <img src="IMG-ARTS/1-LOGO-RAFA-FARIAS-SEÇÃO-1.png" alt="Logo Rafa Farias" class="main-logo">
+                </div>
+                <div class="welcome-text reveal">
+                    <h1>Bem-vindo ao universo sonoro de COMA</h1>
+                    <p>Uma jornada musical por Rafa Farias</p>
+                </div>
+                <div class="cta-container reveal">
+                    <a href="#p2" class="cta-button">ENTRAR</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: COMA -->
+        <section id="p2" class="section">
+            <div class="section-inner">
+                <div class="track-art reveal">
+                    <img src="IMG-ARTS/2-OLHOS-COMA-SEÇÃO-2.png" alt="Olhos COMA" class="track-image">
+                </div>
+                <div class="track-info reveal">
+                    <h2>COMA</h2>
+                    <div class="audio-player">
+                        <audio id="audio-coma" src="MP3/coma.mp3" preload="metadata"></audio>
+                        <div class="player-controls">
+                            <button class="play-button" data-audio="audio-coma" aria-label="Tocar COMA">
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="play-icon">
+                                    <path fill="currentColor" d="M8 5v14l11-7z"/>
+                                </svg>
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="pause-icon">
+                                    <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                                </svg>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div class="time-display">
+                                    <span class="current-time">0:00</span>
+                                    <span class="duration">0:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="track-phrases reveal">
+                    <p class="psycho-text">Mergulhe no abismo</p>
+                    <p class="psycho-text">Onde a consciência se perde</p>
+                    <p class="psycho-text">E o som te guia</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Born Again -->
+        <section id="p3" class="section">
+            <div class="section-inner">
+                <div class="track-columns">
+                    <div class="track-lyrics reveal">
+                        <h2>BORN AGAIN</h2>
+                        <div class="lyrics-container">
+                            <p>Nascido das cinzas<br>
+                            Do que um dia fui<br>
+                            Renascido no caos<br>
+                            Que me consumiu</p>
+                            
+                            <p>Born again<br>
+                            From the ashes I rise<br>
+                            Born again<br>
+                            With fire in my eyes</p>
+                        </div>
+                        <div class="audio-player">
+                            <audio id="audio-bornagain" src="MP3/bornagain.mp3" preload="metadata"></audio>
+                            <div class="player-controls">
+                                <button class="play-button" data-audio="audio-bornagain" aria-label="Tocar Born Again">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" class="play-icon">
+                                        <path fill="currentColor" d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <svg viewBox="0 0 24 24" width="24" height="24" class="pause-icon">
+                                        <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                                    </svg>
+                                </button>
+                                <div class="progress-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <div class="time-display">
+                                        <span class="current-time">0:00</span>
+                                        <span class="duration">0:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="track-art reveal">
+                        <img src="IMG-ARTS/3-PLANTA-BORN-AGAIN-SEÇÃO-3.png" alt="Planta Born Again" class="track-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: The Voice That Betrays -->
+        <section id="p4" class="section">
+            <div class="section-inner">
+                <div class="track-art reveal">
+                    <img src="IMG-ARTS/4-BOCA-THE-VOICE-THAT-BETRAYS-SEÇÃO-4.png" alt="Boca The Voice That Betrays" class="track-image">
+                </div>
+                <div class="track-info reveal">
+                    <h2>THE VOICE THAT BETRAYS</h2>
+                    <div class="lyrics-container">
+                        <p>A voz que me trai<br>
+                        Sussurra mentiras<br>
+                        Que eu quero acreditar</p>
+                        
+                        <p>The voice inside<br>
+                        Echoes of doubt<br>
+                        Shadows of fear</p>
+                    </div>
+                    <div class="audio-player">
+                        <audio id="audio-voice" src="MP3/voice.mp3" preload="metadata"></audio>
+                        <div class="player-controls">
+                            <button class="play-button" data-audio="audio-voice" aria-label="Tocar The Voice That Betrays">
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="play-icon">
+                                    <path fill="currentColor" d="M8 5v14l11-7z"/>
+                                </svg>
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="pause-icon">
+                                    <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                                </svg>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div class="time-display">
+                                    <span class="current-time">0:00</span>
+                                    <span class="duration">0:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 5: No More Chains -->
+        <section id="p5" class="section">
+            <div class="section-inner">
+                <div class="track-info reveal">
+                    <h2>NO MORE CHAINS</h2>
+                    <div class="lyrics-container">
+                        <p>Correntes quebradas<br>
+                        Liberdade encontrada<br>
+                        Não mais prisioneiro<br>
+                        De mim mesmo</p>
+                        
+                        <p>No more chains<br>
+                        Holding me down<br>
+                        Breaking free<br>
+                        Finding my sound</p>
+                    </div>
+                    <div class="audio-player">
+                        <audio id="audio-nomorechains" src="MP3/nomorechains.mp3" preload="metadata"></audio>
+                        <div class="player-controls">
+                            <button class="play-button" data-audio="audio-nomorechains" aria-label="Tocar No More Chains">
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="play-icon">
+                                    <path fill="currentColor" d="M8 5v14l11-7z"/>
+                                </svg>
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="pause-icon">
+                                    <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                                </svg>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div class="time-display">
+                                    <span class="current-time">0:00</span>
+                                    <span class="duration">0:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="track-art reveal">
+                    <img src="IMG-ARTS/5-ROSTO-NO-MORE-CHAINS-SEÇÃO-5.png" alt="Rosto No More Chains" class="track-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 6: Silence -->
+        <section id="p6" class="section">
+            <div class="section-inner">
+                <div class="track-art reveal">
+                    <img src="IMG-ARTS/6-FUMAÇA-SILENCE-SEÇÃO-6.png" alt="Fumaça Silence" class="track-image">
+                </div>
+                <div class="track-info reveal">
+                    <h2>SILENCE</h2>
+                    <div class="lyrics-container">
+                        <p>No silêncio encontro<br>
+                        O que o barulho esconde<br>
+                        Verdades que só emergem<br>
+                        Quando tudo se cala</p>
+                        
+                        <p>In silence I find<br>
+                        What noise conceals<br>
+                        Truth emerges<br>
+                        When everything stills</p>
+                    </div>
+                    <div class="audio-player">
+                        <audio id="audio-silence" src="MP3/silence.mp3" preload="metadata"></audio>
+                        <div class="player-controls">
+                            <button class="play-button" data-audio="audio-silence" aria-label="Tocar Silence">
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="play-icon">
+                                    <path fill="currentColor" d="M8 5v14l11-7z"/>
+                                </svg>
+                                <svg viewBox="0 0 24 24" width="24" height="24" class="pause-icon">
+                                    <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                                </svg>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div class="time-display">
+                                    <span class="current-time">0:00</span>
+                                    <span class="duration">0:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 7: Release -->
+        <section id="p7" class="section">
+            <div class="section-inner">
+                <div class="release-container reveal">
+                    <h2>RELEASE</h2>
+                    <div class="release-text">
+                        <div class="release-pt">
+                            <p>COMA é uma jornada sonora que explora os limites entre consciência e inconsciência. Através de cinco faixas, Rafa Farias nos convida a mergulhar em um universo onde as fronteiras entre realidade e sonho se dissolvem.</p>
+                            <p>Produzido de forma independente, este EP representa a busca pela autenticidade e expressão genuína, onde cada nota e cada palavra carregam significados profundos sobre transformação e autodescoberta.</p>
+                            <p>As composições transitam entre momentos de introspecção e explosões catárticas, criando uma experiência imersiva que reflete os altos e baixos da jornada humana.</p>
+                        </div>
+                        <div class="release-en">
+                            <p>COMA is a sonic journey that explores the boundaries between consciousness and unconsciousness. Through five tracks, Rafa Farias invites us to dive into a universe where the borders between reality and dream dissolve.</p>
+                            <p>Independently produced, this EP represents the search for authenticity and genuine expression, where each note and word carries deep meanings about transformation and self-discovery.</p>
+                            <p>The compositions transition between moments of introspection and cathartic explosions, creating an immersive experience that reflects the ups and downs of the human journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 8: Galeria -->
+        <section id="p8" class="section">
+            <div class="section-inner">
+                <h2 class="reveal">GALERIA</h2>
+                <div class="gallery-grid reveal">
+                    <!-- As imagens serão carregadas via JavaScript -->
+                    <div class="gallery-item" data-src="IMG-ARTS/7-Galeria-de-fotos-seção-7.png">
+                        <img src="IMG-ARTS/7-Galeria-de-fotos-seção-7.png" alt="Galeria 1" loading="lazy">
+                    </div>
+                    <!-- Placeholder para mais imagens da galeria -->
+                    <div class="gallery-item">
+                        <img src="IMG-ARTS/2-OLHOS-COMA-SEÇÃO-2.png" alt="Galeria 2" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="IMG-ARTS/3-PLANTA-BORN-AGAIN-SEÇÃO-3.png" alt="Galeria 3" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="IMG-ARTS/4-BOCA-THE-VOICE-THAT-BETRAYS-SEÇÃO-4.png" alt="Galeria 4" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="IMG-ARTS/5-ROSTO-NO-MORE-CHAINS-SEÇÃO-5.png" alt="Galeria 5" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="IMG-ARTS/6-FUMAÇA-SILENCE-SEÇÃO-6.png" alt="Galeria 6" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="lightbox">
+                <div class="lightbox-content">
+                    <img src="" alt="Imagem ampliada">
+                    <button class="lightbox-close" aria-label="Fechar galeria">×</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 9: Vídeo -->
+        <section id="p9" class="section">
+            <div class="section-inner">
+                <h2 class="reveal">ASSISTA</h2>
+                <div class="video-container reveal">
+                    <div class="video-frame">
+                        <!-- YouTube iframe será carregado via JavaScript quando a seção estiver visível -->
+                        <div class="video-placeholder" data-youtube-id="dQw4w9WgXcQ">
+                            <button class="video-play-button" aria-label="Assistir vídeo">
+                                <svg viewBox="0 0 24 24" width="48" height="48">
+                                    <path fill="currentColor" d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
