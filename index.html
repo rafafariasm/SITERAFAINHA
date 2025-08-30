@@ -6,39 +6,29 @@
     <title>Mental Coma</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: 'Graphic Psychopathy';
-            src: url('./GRAPHIC%20PSYCHOPATHY.ttf') format('truetype');
-            font-weight: normal;
-            font-style: italic;
-        }
-    </style>
 </head>
 <body>
 
-    <div id="section-1" class="section active">
-        <div class="background" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%201%20BEM%20VINDO.png');"></div>
+    <div id="section-1" class="section active" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%201%20BEM%20VINDO.png');">
         <div class="content">
             <img src="./PNG%20-%20ARTES/1-LOGO-RAFA-FARIAS-SEÇÃO-1.png" alt="Rafa Farias Logo" class="logo">
-            <p>The best part of the experience is diving in alive. Welcome to the Mental Coma.<br>O melhor da experiência é mergulhar vivo. Bem-vindo ao Coma Mental.</p>
-            <button class="button" onclick="nextSection()">ENTER</button>
+            <p class="intro-text">The best part of the experience is diving in alive. Welcome to the Mental Coma.<br>O melhor da experiência é mergulhar vivo. Bem-vindo ao Coma Mental.</p>
+            <button class="button enter-button" onclick="nextSection()">ENTER</button>
         </div>
     </div>
 
-    <div id="section-2" class="section">
-        <div class="background" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%202%20COMA.png');"></div>
+    <div id="section-2" class="section" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%202%20COMA.png');">
         <div class="content">
             <img src="./PNG%20-%20ARTES/2-OLHOS-COMA-SEÇÃO-2.png" alt="Olhos Coma" class="art">
             <h1 class="title-main">COMA</h1>
             <div class="player-container">
                 <audio id="audio-coma" src="./MP3/coma.mp3"></audio>
                 <div class="player-controls">
-                    <button onclick="playAudio('audio-coma')">▶</button>
+                    <button class="play-button" onclick="togglePlayPause('audio-coma')">▶</button>
                     <div class="progress-bar-container">
-                        <div class="progress-bar" id="progress-coma"></div>
+                        <div class="progress-bar"></div>
                     </div>
-                    <span class="time-display" id="time-coma">0:00 / 0:00</span>
+                    <span class="time-display">0:00 / 0:00</span>
                 </div>
             </div>
             <div class="nav-buttons">
@@ -48,8 +38,7 @@
         </div>
     </div>
 
-    <div id="section-3" class="section">
-        <div class="background" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%203%20BORN%20AGAIN.png');"></div>
+    <div id="section-3" class="section" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%203%20BORN%20AGAIN.png');">
         <div class="content with-side-text">
             <div class="side-text-container left">
                 <p class="italic-text">Os fragmentos de cada memória o corroem.<br>O que antes era fuga, agora é conforto.<br>Renascendo e sangrando em silêncio.</p>
@@ -127,13 +116,13 @@ Always been my own
                 </div>
             </div>
             <div class="player-container">
-                <audio id="audio-born-again" src="./MP3/bornagain.mp3"></audio>
+                <audio id="audio-bornagain" src="./MP3/bornagain.mp3"></audio>
                 <div class="player-controls">
-                    <button onclick="playAudio('audio-born-again')">▶</button>
+                    <button class="play-button" onclick="togglePlayPause('audio-bornagain')">▶</button>
                     <div class="progress-bar-container">
-                        <div class="progress-bar" id="progress-born-again"></div>
+                        <div class="progress-bar"></div>
                     </div>
-                    <span class="time-display" id="time-born-again">0:00 / 0:00</span>
+                    <span class="time-display">0:00 / 0:00</span>
                 </div>
             </div>
             <div class="nav-buttons">
@@ -143,8 +132,7 @@ Always been my own
         </div>
     </div>
 
-    <div id="section-4" class="section">
-        <div class="background" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%204%20THE%20VOICE%20THAT%20BETRAYS.png');"></div>
+    <div id="section-4" class="section" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%204%20THE%20VOICE%20THAT%20BETRAYS.png');">
         <div class="content with-side-text">
             <div class="side-text-container left">
                 <p class="italic-text">A voz que te levanta também pode te sabotar e te enganar.<br>Mas a queda revela verdades que o conforto esconde.</p>
@@ -194,11 +182,11 @@ Is now with you
             <div class="player-container">
                 <audio id="audio-voice" src="./MP3/voice.mp3"></audio>
                 <div class="player-controls">
-                    <button onclick="playAudio('audio-voice')">▶</button>
+                    <button class="play-button" onclick="togglePlayPause('audio-voice')">▶</button>
                     <div class="progress-bar-container">
-                        <div class="progress-bar" id="progress-voice"></div>
+                        <div class="progress-bar"></div>
                     </div>
-                    <span class="time-display" id="time-voice">0:00 / 0:00</span>
+                    <span class="time-display">0:00 / 0:00</span>
                 </div>
             </div>
             <div class="nav-buttons">
@@ -208,8 +196,7 @@ Is now with you
         </div>
     </div>
     
-    <div id="section-5" class="section">
-        <div class="background" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%205%20NO%20MORE%20CHAINS.png');"></div>
+    <div id="section-5" class="section" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%205%20NO%20MORE%20CHAINS.png');">
         <div class="content with-side-text">
             <div class="side-text-container left">
                 <p class="italic-text">A liberdade começa quando se rejeita o molde. Nem todas as prisões têm grades, muitas têm padrões. Não há volta quando se sente o gosto de si mesmo.</p>
@@ -263,13 +250,13 @@ They can’t be part of me
                 </div>
             </div>
             <div class="player-container">
-                <audio id="audio-no-more-chains" src="./MP3/nomorechains.mp3"></audio>
+                <audio id="audio-nomorechains" src="./MP3/nomorechains.mp3"></audio>
                 <div class="player-controls">
-                    <button onclick="playAudio('audio-no-more-chains')">▶</button>
+                    <button class="play-button" onclick="togglePlayPause('audio-nomorechains')">▶</button>
                     <div class="progress-bar-container">
-                        <div class="progress-bar" id="progress-no-more-chains"></div>
+                        <div class="progress-bar"></div>
                     </div>
-                    <span class="time-display" id="time-no-more-chains">0:00 / 0:00</span>
+                    <span class="time-display">0:00 / 0:00</span>
                 </div>
             </div>
             <div class="nav-buttons">
@@ -279,8 +266,7 @@ They can’t be part of me
         </div>
     </div>
 
-    <div id="section-6" class="section">
-        <div class="background" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%206%20SILENCE.png');"></div>
+    <div id="section-6" class="section" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%206%20SILENCE.png');">
         <div class="content with-side-text">
             <div class="side-text-container left">
                 <p class="italic-text">Entre lembranças e cicatrizes, há um novo espaço. O velho eu não volta mais e tudo bem. No silêncio, aceitou o novo recomeço.</p>
@@ -306,11 +292,11 @@ I feel that’s all remainings of me.
             <div class="player-container">
                 <audio id="audio-silence" src="./MP3/silence.mp3"></audio>
                 <div class="player-controls">
-                    <button onclick="playAudio('audio-silence')">▶</button>
+                    <button class="play-button" onclick="togglePlayPause('audio-silence')">▶</button>
                     <div class="progress-bar-container">
-                        <div class="progress-bar" id="progress-silence"></div>
+                        <div class="progress-bar"></div>
                     </div>
-                    <span class="time-display" id="time-silence">0:00 / 0:00</span>
+                    <span class="time-display">0:00 / 0:00</span>
                 </div>
             </div>
             <div class="nav-buttons">
@@ -320,17 +306,16 @@ I feel that’s all remainings of me.
         </div>
     </div>
     
-    <div id="section-7" class="section">
-        <div class="background" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%207%20TEXTO%20RELEASE.png');"></div>
+    <div id="section-7" class="section" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%207%20TEXTO%20RELEASE.png');">
         <div class="content release-content">
             <div class="release-text">
                 <h1>RELEASE</h1>
                 <h2>[PT-BR]</h2>
                 <p>O conceito do EP Coma parte da premissa de fazer uma metáfora com o estado físico do coma com o estar “adormecido” em ciclos, rotinas, hábitos, cela mental e tudo que possa aprisionar o ser.</p>
                 <p>O conceito traz o personagem retomando sua consciência na faixa “Coma”, uma faixa instrumental com ruídos. A faixa seguinte, “Born Again (In Silence)”, são suas memórias tomando parte dele e ele reconhecendo que não pode e nem deve aceitar mais viver com suas frustrações, medos e tudo que o fazia se sentir preso. A faixa “The Voice That Betrays” traz a ideia de que o mesmo voz seja inconsciente ou consciente pode ser aquele que tanto te eleva mas também o que te trai, mostrando o outro lado e até mesmo paralisando. Porém, independente disso, é preciso continuar. A próxima jornada vem na faixa “No More Chains” quando ele percebe sua coragem de assumir a vontade de estar livre da cela mental que tanto o prendeu sejam por padrões a “serem seguidos”, ou momentos que o tornem apenas mais um padrão. A faixa que encerra a jornada é “Silence” um interlúdio que, mesmo revisitando suas lembranças, mostra que o importante é seguir para o novo. É a aceitação da morte do seu antigo eu e a abertura para o novo.</p>
-                <h2 class="italic-text">RELEASE [EN]</h2>
-                <p class="italic-text">The concept of the EP Coma is based on a metaphor between the physical state of coma and being “asleep” in cycles, routines, habits a mental cell-everything that can imprison the self.</p>
-                <p class="italic-text">The story begins with the character slowly regaining consciousness in the track “Coma”, an instrumental piece filled with noise and ambience. The next track, “Born Again (In Silence)” represents his memories resurfacing, and his realization that he can no longer, nor should he, accept living under the weight of frustrations, fears, and all that once held him captive. “The Voice That Betrays” brings the idea that the same voice, whether conscious or unconscious, that lifts you up can also betray you. It reveals the other side, sometimes even paralyzing. But regardless of that, the journey must continue. The next step comes with “No More Chains”, when he recognizes his courage to embrace the desire to be free from the mental cell that kept him imprisoned, whether by patterns to be followed or systems that turned him into just another copy. The journey ends with “Silence”, an interlude that, even while revisiting past memories, makes it clear that the essential thing is to move forward. It is the acceptance of the death of his old self and the opening toward something new.</p>
+                <h2 class="italic-text-release">RELEASE [EN]</h2>
+                <p class="italic-text-release">The concept of the EP Coma is based on a metaphor between the physical state of coma and being “asleep” in cycles, routines, habits a mental cell-everything that can imprison the self.</p>
+                <p class="italic-text-release">The story begins with the character slowly regaining consciousness in the track “Coma”, an instrumental piece filled with noise and ambience. The next track, “Born Again (In Silence)” represents his memories resurfacing, and his realization that he can no longer, nor should he, accept living under the weight of frustrations, fears, and all that once held him captive. “The Voice That Betrays” brings the idea that the same voice, whether conscious or unconscious, that lifts you up can also betray you. It reveals the other side, sometimes even paralyzing. But regardless of that, the journey must continue. The next step comes with “No More Chains”, when he recognizes his courage to embrace the desire to be free from the mental cell that kept him imprisoned, whether by patterns to be followed or systems that turned him into just another copy. The journey ends with “Silence”, an interlude that, even while revisiting past memories, makes it clear that the essential thing is to move forward. It is the acceptance of the death of his old self and the opening toward something new.</p>
             </div>
             <div class="nav-buttons">
                 <button class="button" onclick="prevSection()">BACK</button>
@@ -339,8 +324,7 @@ I feel that’s all remainings of me.
         </div>
     </div>
     
-    <div id="section-8" class="section">
-        <div class="background" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%208%20GALERIA%20DE%20FOTOS.png');"></div>
+    <div id="section-8" class="section" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%208%20GALERIA%20DE%20FOTOS.png');">
         <div class="content gallery-content">
             <img src="./PNG%20-%20ARTES/7-Galeria-de-fotos-seção-7.png" alt="Galeria de fotos" class="gallery-image">
             <div class="nav-buttons">
@@ -350,10 +334,9 @@ I feel that’s all remainings of me.
         </div>
     </div>
 
-    <div id="section-9" class="section">
-        <div class="background" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%209%20FUNDO%20VÍDEO%20DO%20YOUTUBE.png');"></div>
+    <div id="section-9" class="section" style="background-image: url('./BACKGROUND/FUNDO%20DA%20SEÇÃO%209%20FUNDO%20VÍDEO%20DO%20YOUTUBE.png');">
         <div class="content video-content">
-            <img src="./seção%209%20-%20VIDEO%20YOUTUBE%20mapa.jpg" alt="Player de YouTube" class="youtube-player-image">
+            <img src="./PNG%20-%20ARTES/seção%209%20-%20VIDEO%20YOUTUBE%20mapa.jpg" alt="Player de YouTube" class="youtube-player-image">
             <div class="nav-buttons">
                 <button class="button" onclick="prevSection()">BACK</button>
                 <button class="button" onclick="goToHome()">HOME</button>
