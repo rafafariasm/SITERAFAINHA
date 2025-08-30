@@ -13,7 +13,7 @@ body, html {
     height: 100%;
     font-family: 'Rajdhani', sans-serif;
     color: #fff;
-    overflow: hidden; /* Evita a rolagem na página principal */
+    overflow: hidden;
     background: #000;
 }
 
@@ -24,7 +24,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    display: none; /* Inicia todas as seções escondidas */
+    display: none;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     background-size: cover;
@@ -44,7 +44,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Overlay escuro */
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
 
@@ -68,7 +68,7 @@ body, html {
     margin-bottom: 30px;
 }
 
-.intro-text {
+.intro-text, .italic-text, .italic-text-en {
     font-family: 'Graphic Psychopathy', sans-serif;
     font-style: italic;
     font-size: 1.5rem;
@@ -84,13 +84,6 @@ h1, h2 {
 .title-main {
     font-size: 5rem;
     margin-bottom: 2rem;
-}
-
-p.italic-text {
-    font-family: 'Graphic Psychopathy', sans-serif;
-    font-style: italic;
-    font-size: 1.5rem;
-    line-height: 1.8;
 }
 
 /* Botões de navegação */
@@ -174,6 +167,7 @@ p.italic-text {
 }
 
 .lyrics h1 {
+    font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
     font-size: 2rem;
     margin: 0 0 10px 0;
@@ -184,6 +178,7 @@ p.italic-text {
     text-align: right;
     font-size: 1rem;
     line-height: 1.6;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 /* Player de áudio */
@@ -246,7 +241,7 @@ p.italic-text {
 }
 
 .release-text h2.italic-text-release,
-.release-text p.italic-text-release {
+.release-text p.italic-text-en {
     font-family: 'Rajdhani', sans-serif;
     font-style: italic;
 }
