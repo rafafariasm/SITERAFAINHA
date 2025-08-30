@@ -1,0 +1,693 @@
+/* Variáveis e Reset */
+:root {
+    --bg: #0c0c0c;
+    --text: #d0d0d0;
+    --accent: #2bfe47;
+    --overlay: rgba(12, 12, 12, 0.7);
+    --transition: all 0.3s ease;
+}
+
+@font-face {
+    font-family: 'Graphic Psychopathy';
+    src: url('fonts/Graphic-Psychopathy.ttf') format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Tipografia */
+h1, h2, h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.psycho-text {
+    font-family: 'Graphic Psychopathy', cursive;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(43, 254, 71, 0.5);
+}
+
+.release-en p {
+    font-style: italic;
+}
+
+/* Layout e Seções */
+.section {
+    min-height: 100svh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section-inner {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Backgrounds por seção */
+#p1 {
+    background-image: image-set(
+        url('BACKGROUND/FUNDO DA SEÇÃO 1 BEM VINDO.png') 1x
+    );
+}
+
+#p2 {
+    background-image: image-set(
+        url('BACKGROUND/FUNDO DA SEÇÃO 2 COMA.png') 1x
+    );
+}
+
+#p3 {
+    background-image: image-set(
+        url('BACKGROUND/FUNDO DA SEÇÃO 3 BORN AGAIN.png') 1x
+    );
+}
+
+#p4 {
+    background-image: image-set(
+        url('BACKGROUND/FUNDO DA SEÇÃO 4 THE VOICE THAT BETRAYS.png') 1x
+    );
+}
+
+#p5 {
+    background-image: image-set(
+        url('BACKGROUND/FUNDO DA SEÇÃO 5 NO MORE CHAINS.png') 1x
+    );
+}
+
+#p6 {
+    background-image: image-set(
+        url('BACKGROUND/FUNDO DA SEÇÃO 6 SILENCE.png') 1x
+    );
+}
+
+#p7 {
+    background-image: image-set(
+        url('BACKGROUND/FUNDO DA SEÇÃO 7 TEXTO RELEASE.png') 1x
+    );
+}
+
+#p8 {
+    background-image: image-set(
+        url('BACKGROUND/FUNDO DA SEÇÃO 8 GALERIA DE FOTOS.png') 1x
+    );
+}
+
+#p9 {
+    background-image: image-set(
+        url('BACKGROUND/FUNDO DA SEÇÃO 9 FUNDO VÍDEO DO YOUTUBE.png') 1x
+    );
+}
+
+/* Overlay para melhorar legibilidade */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay);
+    z-index: 1;
+}
+
+/* Header e Navegação */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: rgba(12, 12, 12, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.logo-small img {
+    height: 40px;
+    width: auto;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: rgba(12, 12, 12, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.menu-fab {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 101;
+    padding: 10px;
+}
+
+.menu-fab span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent);
+    transition: var(--transition);
+}
+
+.menu-fab.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-fab.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-fab.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mobile-menu ul {
+    text-align: center;
+}
+
+.nav-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: var(--transition);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(43, 254, 71, 0.5);
+}
+
+/* Controles de navegação entre seções */
+.section-controls {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 90;
+}
+
+.prev-section, .next-section {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(12, 12, 12, 0.7);
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.prev-section:hover, .next-section:hover {
+    background-color: var(--accent);
+    color: var(--bg);
+    box-shadow: 0 0 15px rgba(43, 254, 71, 0.7);
+}
+
+/* Seção 1: Bem-vindo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.main-logo {
+    max-width: 80%;
+    height: auto;
+}
+
+.welcome-text {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: transparent;
+    color: var(--accent);
+    border: 1.5px solid var(--accent);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: var(--transition);
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: var(--accent);
+    color: var(--bg);
+    box-shadow: 0 0 15px rgba(43, 254, 71, 0.7);
+}
+
+/* Layout das faixas */
+.track-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.track-art {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.track-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 20px rgba(43, 254, 71, 0.3);
+}
+
+.track-info {
+    text-align: center;
+}
+
+.track-phrases {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.lyrics-container {
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Player de Áudio */
+.audio-player {
+    margin: 1.5rem 0;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.play-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.play-button:hover {
+    background-color: var(--accent);
+    color: var(--bg);
+    box-shadow: 0 0 15px rgba(43, 254, 71, 0.7);
+}
+
+.pause-icon {
+    display: none;
+}
+
+.playing .play-icon {
+    display: none;
+}
+
+.playing .pause-icon {
+    display: block;
+}
+
+.progress-container {
+    flex-grow: 1;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(208, 208, 208, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0;
+    background-color: var(--accent);
+    transition: width 0.1s linear;
+}
+
+.time-display {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text);
+}
+
+/* Seção 7: Release */
+.release-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.release-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.release-pt, .release-en {
+    padding: 1rem;
+    background-color: rgba(12, 12, 12, 0.5);
+    border-radius: 5px;
+}
+
+/* Seção 8: Galeria */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border: 1px solid var(--accent);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(43, 254, 71, 0.5);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    display: block;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 30px rgba(43, 254, 71, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: var(--accent);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Seção 9: Vídeo */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.video-frame {
+    width: 100%;
+    max-width: 800px;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 20px rgba(43, 254, 71, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.video-placeholder {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(12, 12, 12, 0.7);
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.video-play-button:hover {
+    background-color: var(--accent);
+    color: var(--bg);
+    box-shadow: 0 0 20px rgba(43, 254, 71, 0.7);
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Animações */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 3rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .track-columns {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .track-lyrics, .track-art {
+        flex: 1;
+    }
+    
+    .section-controls {
+        flex-direction: row;
+    }
+    
+    .release-text {
+        flex-direction: row;
+    }
+    
+    .release-pt, .release-en {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1280px) {
+    .desktop-menu {
+        display: block;
+    }
+    
+    .menu-fab {
+        display: none;
+    }
+    
+    .desktop-menu ul {
+        flex-direction: row;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .section-controls {
+        right: 3rem;
+    }
+    
+    .psycho-text {
+        font-size: 2rem;
+    }
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    .reveal {
+        transition: none;
+    }
+    
+    .gallery-item:hover {
+        transform: none;
+    }
+}
