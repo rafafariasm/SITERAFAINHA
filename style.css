@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('fontes/Rajdhani-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('fontes/Rajdhani-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('fontes/Rajdhani-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Graphic Psychopathy';
+    src: url('fontes/GraphicPsychopathy-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rajdhani', sans-serif;
+    color: #fff;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.section-visible {
+    display: flex;
+    opacity: 1;
+}
+
+/* Seção 1 */
+#section1 .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#section1 .logo-placeholder {
+    /* Imagem da logo do usuário, pode ser adicionada aqui ou na imagem de fundo */
+    width: 150px; 
+    height: 150px; 
+    margin: 0 auto;
+}
+#section1 h1 { font-size: 1.5rem; margin: 0; }
+#section1 p { font-size: 1rem; margin: 0; }
+
+.enter-button {
+    padding: 10px 30px;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+/* Player de Música e Navegação */
+.player-container {
+    position: relative;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.player-container.left { align-items: flex-start; }
+.player-container h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.audio-player {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.play-button {
+    background-color: #00ff00;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.play-button svg {
+    fill: #000;
+    width: 15px;
+    height: 15px;
+}
+.progress-bar-container {
+    flex-grow: 1;
+    height: 5px;
+    background-color: #555;
+    cursor: pointer;
+}
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #00ff00;
+    transition: width 0.1s linear;
+}
+.time-display {
+    font-size: 0.8rem;
+}
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+.nav-button {
+    padding: 10px 20px;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Layout de Conteúdo Esquerda/Direita */
+.content-layout {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+}
+.content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 45%;
+}
+.content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    width: 45%;
+}
+.diary-text {
+    font-family: 'Graphic Psychopathy', sans-serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.lyrics-text {
+    font-family: 'Rajdhani', sans-serif;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+/* Seção 7 (Release) */
+#section7 .release-text {
+    width: 60%;
+    max-width: 800px;
+    text-align: center;
+}
+#section7 .release-text h2 { margin-bottom: 0; }
+#section7 .release-text p { margin-top: 10px; }
+#section7 .release-text p.english { font-style: italic; }
+
+/* Seção 8 (Galeria) */
+#section8 .gallery-container {
+    width: 80%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+#section8 .gallery-image {
+    width: 100%;
+    height: auto;
+    border: 2px solid #00ff00;
+}
+
+/* Seção 9 (Vídeo) */
+#section9 .video-container {
+    width: 80%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+}
+#section9 iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .content-left, .content-right {
+        width: 90%;
+    }
+    .content-left .player-container {
+        align-items: center;
+    }
+    .diary-text {
+        font-size: 1rem;
+    }
+    .lyrics-text {
+        font-size: 0.9rem;
+    }
+    #section7 .release-text {
+        width: 90%;
+    }
+}
