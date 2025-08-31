@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Coma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="section1" class="section section-visible" style="background-image: url('background-site/1-FUNDO-DA-SEÇÃO-1-BEM-VINDO-COM-ARTE.png');">
+        <div class="content">
+            <img src="https://i.ibb.co/L5T47gV/se%C3%A7%C3%A3o-1-BEM-VINDO-ENTER-mapa.jpg" alt="Logo" style="width: 200px;">
+            <h1>The best part of the experience is diving in alive. Welcome to the Mental Coma.</h1>
+            <p>O melhor da experiência é mergulhar vivo. Bem-vindo ao Coma Mental.</p>
+            <button class="enter-button" onclick="navigate(2)">Enter</button>
+        </div>
+    </div>
+
+    <div id="section2" class="section" style="background-image: url('background-site/2-FUNDO-DA-SEÇÃO-2-COMA-COM-ARTE.png');">
+        <div class="player-container">
+            <h2>COMA</h2>
+            <div class="audio-player">
+                <button class="play-button" data-src="mp3/coma.mp3" data-title="COMA">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <div class="progress-bar-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="time-display">0:00 / 0:00</div>
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <button class="nav-button" onclick="navigate(1)">Back</button>
+            <button class="nav-button" onclick="navigate(3)">Next</button>
+        </div>
+    </div>
+    
+    <div id="section3" class="section" style="background-image: url('background-site/3-FUNDO-DA-SEÇÃO-3-BORN-AGAIN-COM-ARTE.png');">
+        <div class="content-layout">
+            <div class="content-left">
+                <div class="diary-text">
+                    <p>Os fragmentos de cada memória o corroem.<br>O que antes era fuga, agora é conforto.<br>Renascer é sangrar em silêncio.</p>
+                    <p>The fragments of each memory eat away at him.<br>What once was escape is now confort.<br>To be reborn is to bleed in silence.</p>
+                </div>
+                <div class="player-container left">
+                    <h2>Born Again (In Silence)</h2>
+                    <div class="audio-player">
+                        <button class="play-button" data-src="mp3/bornagain.mp3" data-title="Born Again (In Silence)">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-display">0:00 / 0:00</div>
+                    </div>
+                </div>
+                <div class="nav-buttons" style="margin-top: 20px;">
+                    <button class="nav-button" onclick="navigate(2)">Back</button>
+                    <button class="nav-button" onclick="navigate(4)">Next</button>
+                </div>
+            </div>
+            <div class="content-right">
+                <pre class="lyrics-text">
+I woke from the past I made
+Took too long to feel awake
+The paths I drew have now decayed
+They faded as I stayed
+
+Running from what was real
+(Feeding pride on twisted deals)
+Then it hit — no sound, no sign
+(A flash I couldn’t define)
+
+clouded mind from the green
+filling space with thoughts unclean
+took a turn I hadn't seen
+searching now for what it means
+
+Remains of the final
+This place remains sick
+I brought to me inside
+All the rot for me to keep
+
+This is my promised final
+The rest can fade
+
+Time was cruel, and we stood still
+Words unsaid, they always will
+Fear kept us from the fall
+Sin was never ours at all
+
+Now is the time I never chose to live
+Those words I heard just didn’t seem real
+
+Remains of the final
+This place remains sick
+I brought to me inside
+All the rot for me to keep
+
+
+This is my promised final
+The rest can fade away
+I walk path alone
+Always been my own
+
+
+What did you say?
+What did you say?
+Where have I been?
+Oh God, no!
+It feels like being born again
+Here I am...
+
+A dark path to accept
+A war inside my head
+Like a new dawn breaking
+A fresh awakening spread
+
+
+Remains of the final
+This place remains sick
+I brought to me inside
+All the rot for me to keep
+
+
+This is my promised final
+The rest can fade away
+I walk path alone
+Always been my own
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <div id="section4" class="section" style="background-image: url('background-site/4-FUNDO-DA-SEÇÃO-4-THE-VOICE-THAT-BETRAYS---COM-ARTE.png');">
+        <div class="content-layout">
+            <div class="content-left">
+                <div class="diary-text">
+                    <p>A voz que te levanta também pode te sabotar e te enganar.<br>Mas a queda revela verdades que o conforto esconde.</p>
+                    <p>The voice that lifts you can also deceive and betray you.<br>Yet falling unveils truths that comfort always hides.</p>
+                </div>
+                <div class="player-container left">
+                    <h2>The Voice That Betrays</h2>
+                    <div class="audio-player">
+                        <button class="play-button" data-src="mp3/voice.mp3" data-title="The Voice That Betrays">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-display">0:00 / 0:00</div>
+                    </div>
+                </div>
+                <div class="nav-buttons" style="margin-top: 20px;">
+                    <button class="nav-button" onclick="navigate(3)">Back</button>
+                    <button class="nav-button" onclick="navigate(5)">Next</button>
+                </div>
+            </div>
+            <div class="content-right">
+                <pre class="lyrics-text">
+There’s no light, just now
+Open my eyes
+Maybe I never knew
+There’s no soul
+
+Something always called
+Not knowing my name
+I couldn’t fall
+
+No hours moved at all
+While I was lost
+
+There’s no time to lose
+And none to regret
+Because the voice that echoes
+Is the same voice that betrays
+But for every fall, there is a big rise
+From the ashes that remain
+You know the hidden truth
+Is now with you
+
+The hours stayed the same
+But something bold awoke in me
+
+There’s no time to lose
+And none to regret
+Because the voice that echoes
+Is the same voice that betrays
+But for every fall, there is a big rise
+From the ashes that remain
+You know the hidden truth
+Is now with you
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <div id="section5" class="section" style="background-image: url('background-site/5-FUNDO-DA-SEÇÃO-5-NO-MORE-CHAINS-COM-ARTE.png');">
+        <div class="content-layout">
+            <div class="content-left">
+                <div class="diary-text">
+                    <p>A liberdade começa quando se rejeita o molde.<br>Nem todas as prisões têm grades — muitas têm padrões.<br>Não há volta quando se sente o gosto de si mesmo.</p>
+                    <p>Freedom begins when you reject the mold.<br>Not all prisons have bars many wear patterns.<br>Once you taste yourself, there's no turning back.</p>
+                </div>
+                <div class="player-container left">
+                    <h2>No More Chains</h2>
+                    <div class="audio-player">
+                        <button class="play-button" data-src="mp3/nomorechains.mp3" data-title="No More Chains">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-display">0:00 / 0:00</div>
+                    </div>
+                </div>
+                <div class="nav-buttons" style="margin-top: 20px;">
+                    <button class="nav-button" onclick="navigate(4)">Back</button>
+                    <button class="nav-button" onclick="navigate(6)">Next</button>
+                </div>
+            </div>
+            <div class="content-right">
+                <pre class="lyrics-text">
+Your chances slipped away
+Without knowing the cost
+Tried day after day
+Since was lost
+So confused
+By the new
+Still I walk unafraid
+Like a hole in the soul pulling through
+
+Like a darkened room
+Covering my eyes
+Blinding my desire
+Pouring in the fear
+
+Keep me away
+From the poison
+Free from your mental cell
+
+Now I awaken
+Demons will arise
+But I’ve always known myself
+And now I feel alive
+When I was innocent
+I still believed
+Like a burning spark
+Craving what makes the skin breathe
+
+So many senses trapped
+Choices felt all wrong
+Let no one use
+What I’ve said against me
+
+Keep me away
+From the poison
+Free from your mental cell
+Keep me away
+From your ways
+They can’t be part of me
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <div id="section6" class="section" style="background-image: url('background-site/6-FUNDO-DA-SEÇÃO-6-SILENCE-COM-ARTE.png');">
+        <div class="content-layout">
+            <div class="content-left">
+                <div class="diary-text">
+                    <p>Entre lembranças e cicatrizes, há um novo espaço.<br>O velho eu não volta mais e tudo bem.<br>No silêncio, aceitou o novo recomeço.</p>
+                    <p>Between memories and scars, a new space takes shape.<br>The old self won't return and that’s okay.<br>In silence, he embraced the new beginning.</p>
+                </div>
+                <div class="player-container left">
+                    <h2>Silence</h2>
+                    <div class="audio-player">
+                        <button class="play-button" data-src="mp3/silence.mp3" data-title="Silence">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-display">0:00 / 0:00</div>
+                    </div>
+                </div>
+                <div class="nav-buttons" style="margin-top: 20px;">
+                    <button class="nav-button" onclick="navigate(5)">Back</button>
+                    <button class="nav-button" onclick="navigate(7)">Next</button>
+                </div>
+            </div>
+            <div class="content-right">
+                <pre class="lyrics-text">
+Trying to hide in suffocating pains
+In the memory of a better time
+Trying to understand the hurt is that
+Time has not been healed
+Tears aren't the choice that
+I cannot decide it
+They are the pages that I cannot forget.
+My heart stops the bleeding
+I feel that’s all remainings of me.
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="section7" class="section" style="background-image: url('background-site/7-FUNDO DA SEÇÃO 7 TEXTO RELEASE.png');">
+        <div class="release-text">
+            <h2>Release (PT-BR)</h2>
+            <p>O conceito do EP Coma parte da premissa de fazer uma metáfora com o estado físico do coma com o estar “adormecida” em ciclos, rotinas, hábitos, cela mental e tudo que possa aprisionar o ser.</p>
+            <p>O conceito traz o personagem retomando sua consciência na faixa “Coma”, uma faixa instrumental com ruídos. A faixa seguinte, “Born Again (In Silence)”, são suas memórias tomando parte dele e ele reconhecendo que não pode e nem deve aceitar mais viver com suas frustrações, medos e tudo que o fazia se sentir preso. A faixa “The Voice That Betrays” traz a ideia de que a mesma voz seja inconsciente ou consciente pode ser aquela que tanto te eleva mas também a que te trai, mostrando o outro lado e até mesmo paralisando. Porém, independente disso, é preciso continuar. A próxima jornada vem na faixa “No More Chains” quando ele percebe sua coragem de assumir a vontade de estar livre da cela mental que tanto o prendeu sejam por padrões a “serem seguidos”, ou movimentos que a tornem apenas mais um padrão. A faixa que encerra a jornada é “Silence”, um interlúdio que, mesmo revisitando suas lembranças, mostra que o importante é seguir para o novo. É a aceitação da morte do seu antigo eu e a abertura para a nova.</p>
+            <br>
+            <h2>Release (EN)</h2>
+            <p class="english">The concept of the EP Coma is based on a metaphor between the physical state of coma and being “asleep” in cycles, routines, habits, a mental cell - everything that can imprison the self.</p>
+            <p class="english">The story begins with the character slowly regaining consciousness in the track “Coma”, an instrumental piece filled with noise and ambiance. The next track, “Born Again (In Silence)”, represents his memories resurfacing, and his realization that he can no longer, nor should he, accept living under the weight of frustrations, fears, and all that once held him captive. “The Voice That Betrays” brings the idea that the same voice, whether conscious or unconscious, that lifts you up can also betray you. It reveals the other side, sometimes even paralyzing. But regardless of that, the journey must continue. The next step comes with “No More Chains”, when he recognizes his courage to embrace the desire to be free from the mental cell that kept him imprisoned, whether by patterns to be followed or systems that turned him into just another cog. The journey ends with “Silence”, an interlude that, even while revisiting past memories, makes it clear that the essential thing is to move forward. It is the acceptance of the death of this old self and the opening toward something new.</p>
+        </div>
+        <div class="nav-buttons">
+            <button class="nav-button" onclick="navigate(6)">Back</button>
+            <button class="nav-button" onclick="navigate(8)">Next</button>
+        </div>
+    </div>
+
+    <div id="section8" class="section" style="background-image: url('background-site/8-FUNDO DA SEÇÃO 8 GALERIA DE FOTOS.png');">
+        <div class="gallery-container">
+            <img class="gallery-image" src="png-secao-8-galeria-de-fotos/7-Galeria-de-fotos-seção-7.png" alt="Foto 1">
+            </div>
+        <div class="nav-buttons" style="margin-top: 20px;">
+            <button class="nav-button" onclick="navigate(7)">Back</button>
+            <button class="nav-button" onclick="navigate(9)">Next</button>
+        </div>
+    </div>
+    
+    <div id="section9" class="section" style="background-image: url('background-site/9-FUNDO DA SEÇÃO 9 FUNDO VÍDEO DO YOUTUBE.png');">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="nav-buttons" style="margin-top: 20px;">
+            <button class="nav-button" onclick="navigate(8)">Back</button>
+            <button class="nav-button" onclick="navigate(1)">Home</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
